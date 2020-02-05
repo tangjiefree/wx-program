@@ -1,0 +1,60 @@
+/* pages/center/center.wxss */
+.header {
+  display: flex;
+  flex-direction: column;
+  background: #308cff;
+  padding: 20rpx 20rpx 0;
+  height: 430rpx;
+}
+
+.header .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .top image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.header .middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .middle image {
+  width: 132rpx;
+  height: 132rpx;
+  margin: 10rpx;
+}
+.header .middle text {
+  color:#fff;
+}
+
+.tabicon {
+  width: 90%;
+  height: 200rpx;
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  border-radius: 20rpx;
+  margin: -150rpx auto 0;
+  align-items: center;
+}
+
+.tabicon .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabicon .content image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.cu-list {
+  width: 90%;
+  margin: 20rpx auto;
+}

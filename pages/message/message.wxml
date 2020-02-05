@@ -1,0 +1,24 @@
+<view wx:if="{{!islogin}}" class="nologin">
+  <image src="../../images/nologin.png"></image>
+  <text>当前未登录</text>
+  <navigator url="/pages/login/login">
+    <button class="cu-btn block bg-blue margin-tb-sm lg">
+    马上登陆</button>
+  </navigator>
+</view>
+
+<view wx:else class="login">
+  <block wx:for="{{messageArr}}" wx:key="*this">
+    <view class="content">
+      <view class="top">
+        <view class="left">
+          <image src="../../images/index-4.png"></image>
+          <wxs src="../../utils/util.wxs" module="tools"></wxs>
+          <text>消息发布时间{{tools.dealtime(item.createdAt)}}</text>
+        </view>
+        <text class="close" bindtap="dealmessage" data-index="{{index}}">x</text>
+      </view>
+      <rich-text class="rich" nodes="{{item.content}}"></rich-text>
+    </view>
+  </block>
+</view>

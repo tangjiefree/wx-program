@@ -1,0 +1,39 @@
+/* pages/message/message.wxss */
+.nologin,
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login .content {
+  width: 95%;
+  height: 210rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  margin: 20rpx auto;
+  padding: 0 20rpx;
+}
+
+.login .content .top,
+.login .content .top .left {
+  display: flex;
+  align-items: center;
+}
+
+.login .content .top {
+  justify-content: space-between;
+  padding: 20rpx 0rpx;
+}
+
+.login .content .top .close {
+  font-size: 16pt;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.login .content .top .left image {
+  width: 52rpx;
+  height: 52rpx;
+  margin-right: 20rpx;
+}

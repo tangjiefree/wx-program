@@ -1,0 +1,8 @@
+/* pages/detail/detail.wxss */
+.xiangqing {
+  width: 93%;
+  padding: 23rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  margin: 0 auto;
+}

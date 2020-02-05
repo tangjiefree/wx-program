@@ -1,0 +1,14 @@
+var dealtime =  function(time) {
+  var date = getDate(time)
+  var y = date.getFullYear();
+  var m = date.getMonth() + 1;
+  var d = date.getDate();
+  // var h = date.getHours();
+  // var m = date.getMinutes();
+  // var s = date.getSeconds();
+  return y + '-' + m + '-' + d;
+}
+
+module.exports = {
+  dealtime: dealtime
+}

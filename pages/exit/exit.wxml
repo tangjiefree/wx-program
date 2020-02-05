@@ -1,0 +1,29 @@
+<view class="cu-list menu">
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="text-grey">头像</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="text-grey">会员手机号</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="text-grey">考试类型</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="text-grey">会员昵称</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="text-grey">登陆密码</text>
+    </view>
+  </view>
+</view>
+
+<button class="bg-blue">退出登陆</button>

@@ -1,0 +1,115 @@
+/**index.wxss**/
+.free_lesson {
+}
+
+.free_lesson .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.outbox {
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+}
+
+.free_lesson {
+  width: 520rpx;
+  height: 300rpx;
+  margin-right: 30rpx;
+}
+  
+
+.free_lesson .content {
+  overflow: hidden;
+  border-radius: 20rpx;
+  box-shadow: 4rpx 4rpx 4rpx #ccc;
+}
+
+.free_lesson .content .top,
+.free_lesson .content .bottom {
+  padding: 0 30rpx;
+}
+
+.free_lesson .content .top {
+  display: flex;
+  flex-direction: column;
+  height: 200rpx;
+  justify-content: space-around;
+  background: #ebf6f2;
+}
+
+.free_lesson .content .bottom {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.hot-lesson-item {
+  margin: 10rpx auto;
+  width: 95%;
+  height: 450rpx;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 20rpx;
+  justify-content: space-around;
+  box-shadow: 0 5rpx 5rpx rgba(0,68,255,.1)
+}
+
+.hot-lesson-item .top {
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.hot-lesson-item .middle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hot-lesson-item .middle .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hot-lesson-item .middle .content .head {
+  color: #fff;
+  background: #308cff;
+  display: block;
+  width: 150rpx;
+  border-radius: 27rpx;
+  text-align: center;
+}
+
+.hot-lesson-item .middle image {
+  width: 88rpx;
+  height: 88rpx;
+  margin: 10rpx 0;
+}
+
+.hot-lesson-item .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hot-lesson-item .bottom .left text,
+.hot-lesson-item .bottom .right text {
+  margin-right: 10rpx;
+}
+
+.hot-lesson-item .bottom .left text:nth-child(1) {
+  color: red;
+}
+
+.hot-lesson-item .bottom .left text:nth-child(2) {
+  text-decoration: line-through;
+}
+.hot-lesson-item .bottom .left text:nth-child(2),
+.hot-lesson-item .bottom .right text {
+  color: #999;
+}

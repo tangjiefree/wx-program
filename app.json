@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/flash/flash",
+    "pages/exit/exit",
+    "pages/message/message",
+    "pages/center/center",
+    "pages/login/login",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "动漫壁纸",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#308cff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index-1.png",
+        "selectedIconPath": "images/index-2.png"
+      },
+      {
+        "pagePath": "pages/flash/flash",
+        "text": "推荐",
+        "iconPath": "images/index-3.png",
+        "selectedIconPath": "images/index-3.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "images/index-6.png",
+        "selectedIconPath": "images/index-4.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "我的",
+        "iconPath": "images/index-5.png",
+        "selectedIconPath": "images/index-7.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

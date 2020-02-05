@@ -1,0 +1,15 @@
+<!--pages/login/login.wxml-->
+<view class="whole">
+  <image class="bg" src="../../images/login.png"></image>
+  <view class="content">
+    <!-- <view class="label">
+      <text class="cuIcon-mobile"></text>
+      <input placeholder="请输入你的手机号"></input>
+    </view>
+    <view class="label">
+      <text class="cuIcon-lock"></text>
+      <input type="password" placeholder="请输入你的密码"></input>
+    </view> -->
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="cu-btn block bg-blue" bindtap="gologin">登录</button>
+  </view>
+</view>

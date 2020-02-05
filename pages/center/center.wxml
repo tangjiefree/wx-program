@@ -1,0 +1,102 @@
+<view class="container">
+
+  <view class="header">
+    <view class="top">
+      <navigator open-type="switchTab" url="/pages/message/message">
+        <image src="../../images/msg.png" />
+      </navigator>
+      <!-- <image src="../../images/set.png" /> -->
+    </view>
+    <view class="middle">
+      <image src="{{coverImg}}"/>
+      <text>{{coverText}}</text>
+    </view>
+  </view>
+
+  <view class="tabicon shadow-warp">
+      <block wx:for="{{iconArr}}" wx:key="*this">
+        <view class="content" bindtap="showModal" data-id="{{item.id}}" data-target="Image">
+          <image src="{{item.img}}"/>
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+  </view>
+  <!-- <view class="cu-list menu">
+    <view class="cu-item arrow" bindtap="showModal" data-target="Image">
+      <view class="content">
+        <text class="cuIcon-ticket"></text>
+        <text class="text-grey">我的优惠券</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="showModal" data-target="Image">
+      <view class="content">
+        <text class="cuIcon-refund"></text>
+        <text class="text-grey">余额充值</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-list menu">
+    <view class="cu-item arrow" bindtap="showModal" data-target="Image">
+      <view class="content">
+        <text class="cuIcon-edit"></text>
+        <text class="text-grey">我的协议</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="showModal" data-target="Image">
+      <view class="content">
+        <text class="cuIcon-cart"></text>
+        <text class="text-grey">我的购物车</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="showModal" data-target="Image">
+      <view class="content">
+        <text class="cuIcon-same"></text>
+        <text class="text-grey">图书防伪查询</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap="showModal" data-target="Image">
+      <view class="content">
+        <text class="cuIcon-like"></text>
+        <text class="text-grey">我的收藏</text>
+      </view>
+    </view>
+  </view> -->
+
+  <view class="cu-list menu">
+    <view class="cu-item arrow" data-id="6" bindtap="showModal" data-target="Image">
+      <view class="content">
+        <text class="cuIcon-servicefill"></text>
+        <text class="text-grey">联系客服</text>
+      </view>
+    </view>
+    <!-- <view class="cu-item arrow" bindtap="showModal" data-target="Image">
+      <view class="content">
+        <text class="cuIcon-warn"></text>
+        <text class="text-grey">意见反馈</text>
+      </view>
+    </view> -->
+    <view class="cu-item arrow" data-id="5" bindtap="showModal" data-target="Image">
+      <view class="content">
+        <text class="cuIcon-selection"></text>
+        <text class="text-grey">版本信息</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-modal {{modalName=='Image'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="bg-img" style="background-image: url('{{modelImg}}');height:200px;background-size: cover;">
+      <view class="cu-bar justify-end text-white">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">{{tips}}</view>
+    </view>
+  </view>
+</view>
+
+</view>

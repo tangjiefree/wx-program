@@ -1,0 +1,39 @@
+<view class="container">
+  <view>
+    <swiper class="card-swiper" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff" bindchange="cardSwiper">
+      <swiper-item wx:for="{{bannerList}}" wx:key="*this" class="{{cardIndex === index ? 'cur' : ''}}">
+        <view class="swiper-item">
+          <image mode="aspectFill" src="{{item}}"/>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="middle">
+    <view>
+      <image class="middleImg" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4020360633,685308770&fm=26&gp=0.jpg"></image>
+    </view>
+    <view bindtap="changeTitle" data-code="{{item.code}}" data-id="{{item.id}}" class="block {{item.code === 0 ? '' : 'black'}} {{item.id === curindex ? 'active': ''}}" wx:for="{{middleArr}}" wx:key="*this">
+      <text>{{item.time}}</text>
+      <text>{{item.status}}</text>
+    </view>
+  </view>
+
+  <view class="list">
+    <view class="block" wx:for="{{listArr}}" wx:key="*this">
+      <view class="up">
+        <text>{{item.seckillName}}</text>
+      </view>
+      <view class="bottom">
+        <view class="one">
+          <text>作者：{{item.productId}}</text>
+          <text>更新时间: {{item.startDt}}</text>
+          <text>类型：{{item.subjectId}}</text>
+        </view>
+        <view class="two">
+          <image mode="scaleToFill" src="{{item.mainPicture}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+/* pages/exit/exit.wxss */
+.cu-list {
+  width: 95%;
+  margin: 50rpx auto;
+  border-radius: 20rpx;
+}

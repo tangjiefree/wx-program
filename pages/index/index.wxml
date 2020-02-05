@@ -1,0 +1,76 @@
+<view>
+
+  <view>
+    <swiper class="card-swiper" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff" bindchange="cardSwiper">
+      <swiper-item wx:for="{{bannerList}}" wx:key="*this" class="{{cardIndex === index ? 'cur' : ''}}">
+        <!-- <view class="swiper-item" bindtap="showModal" data-target="Image"> -->
+        <view class="swiper-item">
+          <image mode="aspectFill" src="{{item}}"/>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <text style="padding: 20rpx; font-size: 12pt;">看文字猜动漫人物</text>
+  <view style="overflow-x: auto; padding: 20rpx;">
+    <view class="outbox">
+        <view class="free_lesson" wx:for="{{free_lesson_list}}" wx:key="index">
+          <view class="content" bindtap="goDetail" data-detail="{{item._source}}">
+            <view class="top">
+              <text>{{item._source.cms_content_type_title}}</text>
+              <text style="padding: 20rpx 0; color: #999;">名言：{{item._source.cms_content_type_remark.teacherName}}</text>
+            </view>
+            <view class="bottom">
+              <text wx:if="{{item._source.cms_content_type_remark.price > 0}}">￥{{item._source.cms_content_type_remark.price/100}}</text>
+              <text wx:else>动漫</text>
+              <text>{{item._source.cms_content_type_remark.salesVolume}}人气</text>
+            </view>
+          </view>
+        </view>
+    </view>
+  </view>
+
+  <text style="padding: 20rpx; font-size: 12pt; margin-bottom: 20rpx;">热门动漫简介</text>
+  <view class="hot-lesson-out">
+    <view class="hot-lesson-item" bindtap="goDetail" data-detail="{{out._source}}" wx:for="{{hotLessonArr}}" wx:key="*this" wx:for-item="out">
+      <text class="top">{{out._source.cms_content_type_remark.title}}</text>
+      <view class="middle">
+        <block wx:for="{{out._source.cms_content_type_remark.course_card_label}}" wx:key="*this">
+          <view class="content">
+            <text class="head">{{item}}</text>
+            <image src="{{out._source.cms_content_type_remark.teacherId[index].userRealName}}"/>
+            <!-- <text>{{out._source.cms_content_type_remark.teacherId[index].title}}</text> -->
+          </view>
+        </block>
+      </view>
+      <view class="bottom">
+        <text>本小程序不提供观看服务，仅展示相关动漫人物</text>
+      </view>
+      <!-- <view class="bottom">
+        <view class="left">
+          <text>￥{{out._source.cms_content_type_remark.lowPrice}}</text>
+          <text>￥{{out._source.cms_content_type_remark.highPrice}}</text>
+        </view>
+        <view class="right">
+          <text>{{out._source.cms_content_type_remark.classhour}}课时</text>
+          <text>{{out._source.cms_content_type_remark.salesVolume}}人购买</text>
+        </view>
+      </view> -->
+    </view>
+  </view>
+
+  <view class="cu-modal {{modalName=='Image'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="bg-img" style="background-image: url('https://ossweb-img.qq.com/images/lol/web201310/skin/big91012.jpg');height:200px;">
+      <view class="cu-bar justify-end text-white">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">暂未开放，敬请期待</view>
+    </view>
+  </view>
+</view>
+
+</view>

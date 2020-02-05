@@ -1,0 +1,49 @@
+<view>
+  <!-- <view class="cu-card case" bindtap="showModal" data-target="Image"> -->
+  <view class="cu-card case">
+  <view class="cu-item shadow">
+    <view class="image">
+      <image src="{{detail.cms_content_type_remark.mainPicture}}" mode="widthFix"></image>
+      <!-- <view class="cu-tag bg-blue">详情</view> -->
+      <view class="cu-bar bg-shadeBottom">
+        <text class="text-cut">{{detail.cms_content_type_title}}</text>
+      </view>
+    </view>
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{detail.cms_content_type_remark.mainPicture}});"></view>
+        <view class="content flex-sub">
+          <view class="text-grey">{{detail.cms_content_type_classifyName}}</view>
+          <view class="text-gray text-sm flex justify-between">
+            {{detail.cms_content_type_remark.subTitle}}
+            <view class="text-gray text-sm">
+              <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
+              <!-- <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
+              <text class="cuIcon-messagefill margin-lr-xs"></text> 30 -->
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="xiangqing" wx:if="{{detail.baike}}">
+  <text>故事简介：{{detail.baike}}</text>
+</view>
+
+<view class="cu-modal {{modalName=='Image'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="bg-img" style="background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1579331202535&di=d856b6483db0d1dc999b1eb969f3924d&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3702124135%2C1776183874%26fm%3D214%26gp%3D0.jpg');height:200px;">
+      <view class="cu-bar justify-end text-white">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">即将开放详情入口，敬请期待</view>
+    </view>
+  </view>
+</view>
+</view>
